@@ -1,0 +1,66 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 10% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 80% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 240 5.9% 20%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 25%;
+    --muted-foreground: 240 5% 75%;
+
+    --accent: 45 93% 53%;
+    --accent-foreground: 0 0% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 20%;
+    --input: 240 3.7% 20%;
+    --ring: 240 4.9% 50%;
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+@layer components {
+  .movie-card-hover {
+    @apply transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-black/30;
+  }
+  
+  .gradient-overlay {
+    @apply bg-gradient-to-t from-black/90 via-black/60 to-transparent;
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  }
+
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-md border border-white/10;
+  }
+}
